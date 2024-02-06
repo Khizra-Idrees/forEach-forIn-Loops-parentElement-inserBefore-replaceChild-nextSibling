@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 05</h1>
+    <h2>DOM Parent Manipulation:</h2>
+
+    <p>Remove Child</p>
+    <ul id="parentDiv">
+        <li id="childDiv1">li 1</li>
+        <li id="childDiv2">li 2</li>
+        <li id="childDiv3">li 3</li>
+        <li id="childDiv4">li 4</li>
+        <li id="childDiv5">li 5</li>
+    </ul>
+
+    <p>Replace Child</p>
+    <ul id="secParentDiv">
+        <li id="secChildDiv1">li 1</li>
+        <li id="secChildDiv2">li 2</li>
+        <li id="secChildDiv3">li 3</li>
+        <li id="secChildDiv4">li 4</li>
+        <li id="secChildDiv5">li 5</li>
+    </ul>
+
+    <p>Insert Before</p>
+    <ul id="thirdParentDiv">
+        <li id="thirdChildDiv1">li 1</li>
+        <li id="thirdChildDiv2">li 2</li>
+        <li id="thirdChildDiv3">li 3</li>
+        <li id="thirdChildDiv4">li 4</li>
+        <li id="thirdChildDiv5">li 5</li>
+    </ul>
+    <script>
+        // Assignment 05
+
+        // Practice manipulating the parent elements of a given DOM element. Use methods like `replaceChild`, `removeChild`, and `insertBefore` to modify the structure of a sample HTML document.
+
+        var removeFirstChild = parentDiv.firstElementChild;
+        console.log(parentDiv.removeChild(removeFirstChild));
+
+        var newElement = document.createElement("h1")
+        newElement.textContent= "Heading 1";
+        var firstChild = secParentDiv.firstElementChild;
+        console.log(secParentDiv.replaceChild(newElement,firstChild));
+
+        var p = document.createElement("p");
+        p.textContent="Inserts a new node before a specified existing child node.";
+            
+        console.log(thirdParentDiv.insertBefore(p,thirdChildDiv3));
+    </script>
+</body>
+</html>

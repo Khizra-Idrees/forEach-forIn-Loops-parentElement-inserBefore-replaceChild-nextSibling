@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 10</h1>
+    <h2>Dynamic Element Creation and Event Handling:</h2>
+
+    <p id="paragraphContent">This is content</p>
+    <div id="buttonDiv"></div>
+    <script>
+        // Assignment 10
+
+        // Create a button dynamically using JavaScript and add it to an existing HTML document. Implement event handling for the dynamically created button, and when clicked, it should perform a specific action, such as toggling the visibility of another element or changing the content of a paragraph.
+
+        function createButton() {
+
+        var button = document.createElement("button");
+        button.textContent = "clicked";
+
+        var buttonDiv = document.getElementById("buttonDiv");
+        buttonDiv.appendChild(button);
+
+        button.addEventListener("click", function() {
+        
+        var paragraph = document.getElementById("paragraphContent");
+
+        // Toggle the visibility of the content paragraph
+
+        // If the paragraph is currently hidden (display is "none"), the code makes it visible by setting display to "block".
+
+        if (paragraph.style.display === "none") {
+
+            // // If the paragraph is currently hidden, make it visible
+            paragraph.style.display = "block";
+        } 
+
+        // If the paragraph is currently visible, the code hides it by setting display to "none".
+
+        else {
+
+            // If the paragraph is currently visible, hide it
+            paragraph.style.display = "none";
+        }
+    });
+}
+
+// Call the function to create the button
+createButton();
+        
+
+    </script>
+</body>
+</html>

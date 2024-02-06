@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 03</h1>
+    <h2>Understanding for..in vs for..of:</h2>
+
+    <script>
+        // Assignment 03
+
+        // Highlight the differences between `for..in` and `for..of` loops. Create examples for each and explain when to use one over the other.
+
+        // A for..in loop does not work with arrays
+        // The for..in loop runs with objects and is recommended as well.
+        // The for..in loop returns the key of the object not the value
+        // If we use a for..in loop in an array, it will return the index of the array not the value
+
+        var heading = document.createElement("h4")
+        document.body.appendChild(heading);
+        heading.innerHTML= "for..in Loop <br><br> 1. A for..in loop does not work with arrays. <br> 2. The for..in loop runs with objects and is recommended as well. <br> 3. The for..in loop returns the key of the object not the value. <br> 4. If we use a for..in loop in an array, it will return the index of the array not the value.";
+
+        var obj = {
+            firstName: "Khizra",
+            lastName: "Idrees"
+        }
+
+        for(var key in obj){
+            console.log(key);
+            document.write(key + "<br>");
+        }
+
+
+
+        // The for..of loop runs with an array or it also runs with an object, it is not recommended with an object
+        // The for..of loop returns the value of the array not the index
+        // if we can use for..of loop in object so it can give us error beacuse this for..of loop is used with an array or method like array
+
+        var heading = document.createElement("h4")
+        document.body.appendChild(heading);
+        heading.innerHTML= "for..of Loop <br><br> 1. The for..of loop runs with an array or it also runs with an object, it is not recommended with an object. <br> 2.The for..of loop returns the value of the array not the index. <br> 3. If we can use for..of loop in object so it can give us error beacause this for..of loop is used with an array or method like array.";
+
+        var arr = [5 , 9 , 10 , 34, 67];
+
+        for(var value of arr){
+            console.log(value);
+            document.write(value + "<br>");
+        }
+    </script>
+</body>
+</html>
